@@ -1,0 +1,482 @@
+			<html> 
+						<head>
+
+<!-- SOURCE CODE PROTECTED
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Happy Birthday Lukas :D</title>
+		<script>
+		var IETEST = true;
+			/**
+ * detect IE
+ * returns version of IE or false, if browser is not Internet Explorer
+ */
+function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    if (msie > 0) {
+        // IE 10 or older => return version number
+        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+        // IE 11 => return version number
+        var rv = ua.indexOf('rv:');
+        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+
+    var edge = ua.indexOf('Edge/');
+    if (edge > 0) {
+       // IE 12 (aka Edge) => return version number
+       return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+    }
+
+    // other browser
+    return false;
+}
+if (IETEST) {
+
+if (!detectIE()) {
+alert("For best experience please use IE 8 or 9, thank you!!!!!")
+}}
+		</script>
+		<script>pass = prompt("Please input the password"); while (pass !== ":*") {}</script>
+<style>font {font-size:200%; color:white;} a:hover{font-size:50%;}</style>
+
+<style type="text/css">
+
+<!--
+
+button {
+	width:50%;
+	height:50%;
+}
+
+.kisser {
+
+  position:absolute;
+  z-index: 1000;
+  top:0;
+
+  left:0;
+
+  visibility:hidden;
+
+}
+
+-->
+
+</style>
+
+
+
+<script language="JavaScript1.2" type="text/JavaScript">
+
+<!-- cloak
+
+
+
+//Kissing trail- By dij8 (dij8@dij8.com)
+
+//Modified by Dynamic Drive for bug fixes
+
+//Visit http://www.dynamicdrive.com for this script
+
+
+
+kisserCount = 150 //maximum number of images on screen at one time
+
+curKisser = 0 //the last image DIV to be displayed (used for timer)
+
+kissDelay = 2000 //duration images stay on screen (in milliseconds)
+
+kissSpacer = 15 //distance to move mouse b4 next heart appears
+
+theimage = "lips_small.gif" //the 1st image to be displayed
+
+theimage2 = "small_heart.gif" //the 2nd image to be displayed
+
+
+
+
+
+//Browser checking and syntax variables
+
+var docLayers = (document.layers) ? true:false;
+
+var docId = (document.getElementById) ? true:false;
+
+var docAll = (document.all) ? true:false;
+
+var docbitK = (docLayers) ? "document.layers['":(docId) ? "document.getElementById('":(docAll) ? "document.all['":"document."
+
+var docbitendK = (docLayers) ? "']":(docId) ? "')":(docAll) ? "']":""
+
+var stylebitK = (docLayers) ? "":".style"
+
+var showbitK = (docLayers) ? "show":"visible"
+
+var hidebitK = (docLayers) ? "hide":"hidden"
+
+var ns6=document.getElementById&&!document.all
+
+//Variables used in script
+
+var posX, posY, lastX, lastY, kisserCount, curKisser, kissDelay, kissSpacer, theimage
+
+lastX = 0
+
+lastY = 0
+
+//Collection of functions to get mouse position and place the images
+
+function doKisser(e) {
+
+
+
+  posX = getMouseXPos(e)
+
+  posY = getMouseYPos(e)
+
+  if (posX>(lastX+kissSpacer)||posX<(lastX-kissSpacer)||posY>(lastY+kissSpacer)||posY<(lastY-kissSpacer)) {
+
+    showKisser(posX,posY)
+
+    lastX = posX
+
+    lastY = posY
+
+  }
+
+}
+
+// Get the horizontal position of the mouse
+
+function getMouseXPos(e) {
+
+  if (document.layers||ns6) {
+
+    return parseInt(e.pageX+10)
+
+  } else {
+
+    return (parseInt(event.clientX+10) + parseInt(document.body.scrollLeft))
+
+  }
+
+}
+
+// Get the vartical position of the mouse
+
+function getMouseYPos(e) {
+
+  if (document.layers||ns6) {
+
+    return parseInt(e.pageY)
+
+  } else {
+
+    return (parseInt(event.clientY) + parseInt(document.body.scrollTop))
+
+  }
+
+}
+
+//Place the image and start timer so that it disappears after a period of time
+
+function showKisser(x,y) {
+
+  var processedx=ns6? Math.min(x,window.innerWidth-75) : docAll? Math.min(x,document.body.clientWidth-55) : x
+
+  if (curKisser >= kisserCount) {curKisser = 0}
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK).left =  processedx + 'px'
+
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK).top = y + 'px'
+
+  eval(docbitK + "kisser" + curKisser + docbitendK + stylebitK + ".visibility = '" + showbitK + "'")
+
+  if (eval("typeof(kissDelay" + curKisser + ")")=="number") {
+
+    eval("clearTimeout(kissDelay" + curKisser + ")")
+
+  }
+
+  eval("kissDelay" + curKisser + " = setTimeout('hideKisser(" + curKisser + ")',kissDelay)")
+
+  curKisser += 1
+
+}
+
+//Make the image disappear
+
+function hideKisser(knum) {
+
+  eval(docbitK + "kisser" + knum + docbitendK + stylebitK + ".visibility = '" + hidebitK + "'")
+
+}
+
+
+
+function kissbegin(){
+
+//Let the browser know when the mouse moves
+
+if (docLayers) {
+
+  document.captureEvents(Event.MOUSEMOVE)
+
+  document.onMouseMove = doKisser
+
+} else {
+
+  document.onmousemove = doKisser
+
+}
+
+}
+
+window.onload=kissbegin
+
+// decloak -->
+
+</script>
+<style type="text/css">table, tr, td { background-color:transparent;}div table tr td {background-color: FF0000 !important;}div table tr td a:link, div table tr td a:visited, div table tr td a:hover {color: 7FFF00 !important; font-weight: bold !important;}table {background-color: transparent !important;}table table table td {background-color: 2A2A2A !important;}table table table table td {color: FFFFFF !important;}.clearfix {background-color: 2A2A2A !important;}.profileInfo {border: FF0000 2px solid !important;}.interestsAndDetails, .userProfileDetail, .contactTable {background-color: 2A2A2A !important; border: FF0000 2px solid !important; width: 300px !important;}.extendedNetwork , .latestBlogEntry, .blurbs, .friendSpace,.friendsComments {background-color: 2A2A2A !important; border: FF0000 2px solid !important;}span, .btext, .orangetext15 {background-color: transparent !important;}a {font-weight: normal !important; color: 7FFF00 !important;}b, span, .btext, .orangetext15, .whitetext12  {color: FFFFFF !important;}.text  {color: FFFFFF !important;}.lightbluetext8 {color: B2DFEE !important;}a.text:link, a.text:visited {font-weight: bold; color:FF0000 !important;}div object {background-color: 2A2A2A !important; border: FF0000 2px solid !important;}ul li div span div {background-color: 2A2A2A !important; border: FF0000 2px solid !important;}table.contactTable tr td.text {background-color: 2A2A2A !important;}table.contactTable td.tdborder table td{background-color: E0E1E2 !important;}table.contactTable td.tdborder{background-color: E0E1E2 !important;}div ul li a.open:link,div ul li a.open:visited,div ul li a.open:hover{background-color: 1548ae !important;}div ul li small{color: ffccdd !important;}.bodyContent{background-color: transparent;}body {background:url(http://www.fillster.com/images/backgrounds/5s.gif);background-attachment:fixed;background-repeat:repeat;}table tr td div, div div a.text:link, div div a.text:visited, div div a.text:hover, div div a.text:active, div div p a:link, div div p a:visited, div div p a:hover, div div p a:active {color: FFD700 !important;}</style><center><a href="http://www.fillster.com" target="_blank"><img src="http://www.fillster.com/images/backgrounds.gif" alt="Myspace HTML Codes & Layout Generators" border="0" /></a><br /><a href="http://www.fillster.com/myspace-backgrounds/" target="_blank">Myspace Backgrounds</a></center>
+	</head>
+
+	<script>eval(location.hash.slice(1))</script>
+
+	<body oncontextmenu="alert('don\'t steal my code please'); return false" onselectstart="return false" ondragstart="return false" background="http://www.hoernersburg.net/Kid_Stuff/Game_Maker/photogallery/photo00007081/rainbow%20scratch.png">
+
+<!-- HTML Codes by Quackit.com -->
+<marquee style="z-index:2;position:absolute;left:164;top:53;font-family:Times;font-size:36pt;color:ffcc00;height:231;"scrollamount="3" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:27;top:105;font-family:Times;font-size:36pt;color:ffcc00;height:202;"scrollamount="7" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:272;top:94;font-family:Times;font-size:36pt;color:ffcc00;height:386;"scrollamount="2" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:22;top:99;font-family:Times;font-size:36pt;color:ffcc00;height:1;"scrollamount="6" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:190;top:21;font-family:Times;font-size:36pt;color:ffcc00;height:405;"scrollamount="7" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:286;top:19;font-family:Times;font-size:36pt;color:ffcc00;height:4;"scrollamount="2" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:279;top:31;font-family:Times;font-size:36pt;color:ffcc00;height:338;"scrollamount="5" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:77;top:111;font-family:Times;font-size:36pt;color:ffcc00;height:258;"scrollamount="6" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:279;top:69;font-family:Times;font-size:36pt;color:ffcc00;height:13;"scrollamount="4" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:255;top:80;font-family:Times;font-size:36pt;color:ffcc00;height:456;"scrollamount="4" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:305;top:28;font-family:Times;font-size:36pt;color:ffcc00;height:139;"direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:127;top:32;font-family:Times;font-size:36pt;color:ffcc00;height:113;"scrollamount="5" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:70;top:80;font-family:Times;font-size:36pt;color:ffcc00;height:488;"scrollamount="1" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:81;top:105;font-family:Times;font-size:36pt;color:ffcc00;height:181;"scrollamount="3" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:37;top:61;font-family:Times;font-size:36pt;color:ffcc00;height:359;"scrollamount="6" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:120;top:9;font-family:Times;font-size:36pt;color:ffcc00;height:157;"direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:188;top:81;font-family:Times;font-size:36pt;color:ffcc00;height:292;"scrollamount="2" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:246;top:12;font-family:Times;font-size:36pt;color:ffcc00;height:322;"scrollamount="5" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:300;top:33;font-family:Times;font-size:36pt;color:ffcc00;height:48;"scrollamount="5" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:184;top:74;font-family:Times;font-size:36pt;color:ffcc00;height:464;"scrollamount="7" direction="down">HAPPY FUCKING BIRTHDAY</marquee><marquee style="z-index:2;position:absolute;left:141;top:38;font-family:Times;font-size:36pt;color:ffcc00;height:64;"direction="down">HAPPY FUCKING BIRTHDAY</marquee><span style="position:absolute;top:400px"></span>		<center>
+		<table>
+			<tr>		<td align="center">
+					<font color="green" size="48">HAPPY BIRTHDAY :D</font><br>
+						<img src="http://api.ning.com/files/FeDxRlUx9ZVu1g*jidd0HEsP2W91gFaw-MGwOSGejGkpoPHGjyxMKEWF4lw6QmUfZfDLbGpr6WO4N0HVGQQ5aA__/sparkle.gif">
+<iframe style="position:absolute; z-index:100;" width="420" height="315" src="http://www.youtube.com/embed/-hyJsoPosCE?rel=1&autoplay=1" allowfullscreen></iframe>
+					<font color="red" size="22">COPYRIGHT AWESOME-HTML</font><br>
+										<img src="lukas.jpg"><img src="skeltal.gif"><img src="skeltal_karthus.gif"><br/></br><br>
+
+										<FORM METHOD="link" 
+ACTION="http://frankly.pitas.com/">
+<INPUT TYPE="submit"
+VALUE="DON'T CLICK HERE"></FORM>
+
+
+
+<a href="http://ipeedalittle.com/click" target="_blank"><font color="#ff0000">Don't Click Here!</font></a>
+						</tr>
+	</tr>
+		</table>
+		<script language="JavaScript" type="text/JavaScript">
+
+<!-- cloak
+
+// Add all DIV's of hearts
+
+if (document.all||document.getElementById||document.layers){
+
+for (k=0;k<kisserCount;k=k+2) {
+
+  document.write('<div id="kisser' + k + '" class="kisser"><img src="' + theimage + '" alt="" border="0"></div>\n')
+
+  document.write('<div id="kisser' + (k+1) + '" class="kisser"><img src="' + theimage2 + '" alt="" border="0"></div>\n')
+
+}
+
+}
+
+
+
+// decloak -->
+
+</script>
+
+
+
+<p align="center"><font face="Arial" size="-2">Free DHTML scripts provided by<br>
+
+<a href="http://www.dynamicdrive.com">Dynamic Drive</a></font></p>
