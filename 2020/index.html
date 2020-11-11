@@ -1,8 +1,45 @@
-<head><link rel="stylesheet" href="mystyle_2019-final-version.copy(copied)(2)_final.css"></head>
+<head><title>Happy bday 2020</title><link rel="stylesheet" href="mystyle_2019-final-version.copy(copied)(2)_final.css"></head>
 <div id    =     "tArGeT">
+
 
 <script src="polyfill.js"></script>
 <script>
+ /**
+ * Copyright (c) Filip Smets and its affliates. 
+ *
+ * This source code is licensed under the MIT licence found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ * @author Filip Smets
+ * @receiver Lukas Dietrich
+ *
+ * DO NOT OPEN polyfill.js!!!!!! or do I'm just a bit of text lmao
+ *
+ */
   var tArGeT = dOCuMENt.geTelementBYiD("tArGeT");
+  console.log("Happy BIRTHDAY!!!!!");
   
+  var aNswEr = pROmPt("How old are you now? Very important question. This cannot be <strong>changed later</strong>.");
+  if (aNswEr.TOuPperCaSe().InDexoF("LATER") !== -1 || aNswEr.TOuPperCaSe().InDexoF("CHANGED") !== -1) {
+    ALerT("What did I just say");
+    throw Error('Congrats you broke it');
+  }
+  ALerT("Cool");
+    
+  const aGE = ParSeiNt(aNswEr);
+  
+  for (let I = 0; I < aGE; I++) {
+    SettImeoUT(function () {
+      const nEwELeMeNT = tArGeT.aPPENDCHiLd(dOCuMENt.CReATEELeMENT(DJIV));
+      nEwELeMeNT.classList.aDd("aGe");
+      nEwELeMeNT.aPPENDCHiLd(dOCuMENt.CREaTetExtNodE((I + 1) + "Y"));
+    }, I * 1000);
+  }
+  
+  SettImeoUT(function () {
+      const nEwELeMeNT = tArGeT.aPPENDCHiLd(dOCuMENt.CReATEELeMENT(DJIV));
+      nEwELeMeNT.classList.aDd("hAppYBirTHDaY");
+      nEwELeMeNT.aPPENDCHiLd(dOCuMENt.CREaTetExtNodE("HAPPY BIRTHDAY !!!!!!"));
+    }, aGE * 1000);
 </script>
